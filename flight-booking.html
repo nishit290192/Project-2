@@ -288,27 +288,27 @@
                     <div id="main" class="col-sms-6 col-sm-8 col-md-9">
                         <div class="booking-section travelo-box">
 
-                            <form class="booking-form" onsubmit="sendConfirmationEmail()">
+                            <form class="booking-form" onsubmit="sendConfirmationEmail(); return false;">
                                 <div class="person-information">
-                                    <h2>Your Personal Information</h2>
+                                    <h2>Personal Information</h2>
                                     <div class="form-group row">
                                         <div class="col-sm-6 col-md-5">
                                             <label>first name</label>
-                                            <input type="text" name="first_name" class="input-text full-width" value="" placeholder="" />
+                                            <input type="text" id="first_name" class="input-text full-width" value="" placeholder="" />
                                         </div>
                                         <div class="col-sm-6 col-md-5">
                                             <label>last name</label>
-                                            <input type="text" name="last_name" class="input-text full-width" value="" placeholder="" />
+                                            <input type="text" id="last_name" class="input-text full-width" value="" placeholder="" />
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 col-md-5">
                                             <label>email address</label>
-                                            <input type="text" name="email_address" class="input-text full-width" value="" placeholder="" />
+                                            <input type="text" id="email_address" class="input-text full-width" value="" placeholder="" />
                                         </div>
                                         <div class="col-sm-6 col-md-5">
-                                            <label>Verify E-mail Address</label>
-                                            <input type="text" name="r_email_address" class="input-text full-width" value="" placeholder="" />
+                                            <label>Passport number</label>
+                                            <input type="text" id="passport_num" class="input-text full-width" value="" placeholder="" />
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -316,85 +316,16 @@
                                             <label>Country code</label>
                                             <div class="selector">
                                                 <select name="country_code" class="full-width">
-                                                    <option>United Kingdom (+44)</option>
                                                     <option>United States (+1)</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="col-sm-6 col-md-5">
                                             <label>Phone number</label>
-                                            <input type="text" name="phone_number" class="input-text full-width" value="" placeholder="" />
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 col-md-5">
-                                            <label>Meal preference <small>(optional)</small></label>
-                                            <div class="selector">
-                                                <select name="meal_preference" class="full-width">
-                                                    <option>United Kingdom (+44)</option>
-                                                    <option>United States (+1)</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="checkbox">
-                                            <label>
-                                                <input type="checkbox" name="is_receive_promotion" value="1"> I want to receive <span class="skin-color">Travelo</span> promotional offers in the future
-                                            </label>
+                                            <input type="text" id="phone_number" class="input-text full-width" value="" placeholder="" />
                                         </div>
                                     </div>
                                 </div>
-                                <hr />
-                                <div class="card-information">
-                                    <h2>Your Card Information</h2>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 col-md-5">
-                                            <label>Credit Card Type</label>
-                                            <div class="selector">
-                                                <select class="full-width">
-                                                    <option>select a card</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-md-5">
-                                            <label>Card holder name</label>
-                                            <input type="text" class="input-text full-width" value="" placeholder="" />
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 col-md-5">
-                                            <label>Card number</label>
-                                            <input type="text" class="input-text full-width" value="" placeholder="" />
-                                        </div>
-                                        <div class="col-sm-6 col-md-5">
-                                            <label>Card identification number</label>
-                                            <input type="text" class="input-text full-width" value="" placeholder="" />
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 col-md-5">
-                                            <label>Expiration Date</label>
-                                            <div class="constant-column-2">
-                                                <div class="selector">
-                                                    <select class="full-width">
-                                                        <option>month</option>
-                                                    </select>
-                                                </div>
-                                                <div class="selector">
-                                                    <select class="full-width">
-                                                        <option>year</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3 col-md-2">
-                                            <label>billing zip code</label>
-                                            <input type="text" class="input-text full-width" value="" placeholder="" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr />
                                 <div class="form-group">
                                     <div class="checkbox">
                                         <label>
@@ -417,7 +348,7 @@
                                 <figure class="clearfix">
                                     <a title="" href="flight-detailed.html" class="middle-block"><img class="middle-item" alt="" src="images/flight/thumbnail/1.png"></a>
                                     <div class="travel-title">
-                                        <h5 class="box-title">Indianapolis to paris<small>Oneway flight</small></h5>
+                                        <h5 class="box-title">Indianapolis to Paris<small>One-way flight</small></h5>
                                         <a href="flight-detailed.html" class="button">EDIT</a>
                                     </div>
                                 </figure>
@@ -425,15 +356,15 @@
                                     <div class="constant-column-3 timing clearfix">
                                         <div class="check-in">
                                             <label>Take off</label>
-                                            <span>NOV 30, 2013<br />7:50 am</span>
+                                            <span>MAY 30, 2017<br />7:50 am</span>
                                         </div>
                                         <div class="duration text-center">
                                             <i class="soap-icon-clock"></i>
-                                            <span>13h, 40m</span>
+                                            <span>13h, 10m</span>
                                         </div>
                                         <div class="check-out">
                                             <label>landing</label>
-                                            <span>Nov 13 2013<br />9:20 am</span>
+                                            <span>MAY 30 2017<br />15:00 pm</span>
                                         </div>
                                     </div>
                                 </div>
