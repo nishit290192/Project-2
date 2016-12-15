@@ -27,32 +27,27 @@ function sendConfirmationEmail() {
         return false;
     } else {
 
-        emailjs.send("gmail", "travelo_confirmation", {
-                to_name: firstName,
-                lastName: lastName,
-                to_email: email,
-                phone_number: phonenumber,
-                passport: passport,
-                from: from,
-                to_destination: to,
-                takeOff: takeOff,
-                landing: landing,
-                duration: duration,
-                airline: airline,
-                fType: fType,
-                b_price: b_price,
-                taxes: taxes,
-                totprice: totprice
+        emailjs.send("gmail", "travelo_confirmation_page", {
+                "to_email": email,
+                "to_name": firstName,
+                "lastname": lastName,
+                "passport": passport,
+                "phone_number": phonenumber
             })
             .then(function(response) {
                 console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+
+                console.log("Sent email to " + firstName + " " + lastName + " at " + email +
+                    " and phonenumber " + phonenumber + ", passport " + passport);
+
+                window.location.href = "flight-thankyou.html";
+                
             }, function(err) {
                 console.log("FAILED. error=", err);
             });
 
-            console.log("Sent email");
 
-            window.location.href = "flight-thankyou.html";
+
 
     }
 

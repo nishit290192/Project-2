@@ -71,6 +71,13 @@
       <script type='text/javascript' src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
     <![endif]-->
 
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_OhhIF9UHK4IcaH3L8kcqx");
+        })();
+    </script>
+
     <!-- Javascript Page Loader -->
     <script type="text/javascript" src="js/pace.min.js" data-pace-options='{ "ajax": false }'></script>
     <script type="text/javascript" src="js/page-loading.js"></script>
@@ -195,7 +202,7 @@
                     <p class="description">By signing up, I agree to Travelo's Terms of Service, Privacy Policy, Guest Refund olicy, and Host Guarantee Terms.</p>
                 </div>
                 <div class="email-signup">
-                    <form onsubmit="uploadUser()">
+                    <form onsubmit="uploadUser(); return false;">
                         <div class="form-group ">
                             <input id="userFirstName" type="text" class="input-text full-width" placeholder="first name">
                         </div>
@@ -1077,12 +1084,6 @@
     <script type="text/javascript" src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
 
     <!-- Email integration -->
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-       (function(){
-          emailjs.init("user_OhhIF9UHK4IcaH3L8kcqx");
-       })();
-    </script>
     <script type="text/javascript" src="js/form_validation.js"></script>
 
     <!-- Javascript -->

@@ -46,6 +46,13 @@
         document.write('<link id="main-style" rel="stylesheet" href="css/' + mainStyle + '">');
     </script>
 
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_OhhIF9UHK4IcaH3L8kcqx");
+        })();
+    </script>
+
     <!-- Updated Styles -->
     <link rel="stylesheet" href="css/updates.css">
 
@@ -482,12 +489,6 @@
         </footer>
 
         <!-- Email integration -->
-        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-        <script type="text/javascript">
-            (function() {
-                emailjs.init("user_OhhIF9UHK4IcaH3L8kcqx");
-            })();
-        </script>
         <script type="text/javascript" src="js/email_confirmation.js"></script>
 
         <!-- Javascript -->

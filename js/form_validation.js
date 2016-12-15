@@ -47,14 +47,13 @@ function uploadUser() {
             })
             .then(function(response) {
                 console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+                console.log("Added user: " + firstName + " " + lastName + " with email " + email);
+
+                alert("Welcome, " + firstName + "! We've sent you an email!");
+                window.location.href = "index.html";
             }, function(err) {
                 console.log("FAILED. error=", err);
             });
-
-        console.log("Added user: " + firstName + " " + lastName + " with email " + email);
-
-        alert("Welcome, " + firstName + "! We've sent you an email!");
-        return true;
     }
 
 }
