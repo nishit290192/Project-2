@@ -41,9 +41,11 @@ function sendConfirmationEmail() {
                     " and phonenumber " + phonenumber + ", passport " + passport);
 
                 window.location.href = "flight-thankyou.html";
-                
+
             }, function(err) {
                 console.log("FAILED. error=", err);
+
+                alert("There was an error sending you an email..");
             });
 
 

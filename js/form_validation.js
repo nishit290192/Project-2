@@ -53,6 +53,7 @@ function uploadUser() {
                 window.location.href = "index.html";
             }, function(err) {
                 console.log("FAILED. error=", err);
+                alert("There was an error sending you an email..");
             });
     }
 
